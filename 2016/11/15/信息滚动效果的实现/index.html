@@ -8,16 +8,16 @@
   <link rel="dns-prefetch" href="http://tailorYang.com">
   <title>信息滚动效果的实现 | tailorYang的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="今天在慕课网上看到一个关于信息滚动的例子个人比较好奇就动手做了这个例子这里是展示：信息滚动">
+  <meta name="description" content="今天在慕课网上看到关于信息滚动效果的实现的课程感觉比较有趣，于是根据老师的方法做了一个小的demo代码部分如下（省略了CSS部分）：{ % codeblock }                var area=document.getElementById(‘moocbox’), first=document.getElementById(‘first’),            second=">
 <meta property="og:type" content="article">
 <meta property="og:title" content="信息滚动效果的实现">
-<meta property="og:url" content="http://tailorYang.com/2016/11/14/信息滚动效果的实现/index.html">
+<meta property="og:url" content="http://tailorYang.com/2016/11/15/信息滚动效果的实现/index.html">
 <meta property="og:site_name" content="tailorYang的博客">
-<meta property="og:description" content="今天在慕课网上看到一个关于信息滚动的例子个人比较好奇就动手做了这个例子这里是展示：信息滚动">
-<meta property="og:updated_time" content="2016-11-15T11:55:59.567Z">
+<meta property="og:description" content="今天在慕课网上看到关于信息滚动效果的实现的课程感觉比较有趣，于是根据老师的方法做了一个小的demo代码部分如下（省略了CSS部分）：{ % codeblock }                var area=document.getElementById(‘moocbox’), first=document.getElementById(‘first’),            second=">
+<meta property="og:updated_time" content="2016-11-15T12:06:54.110Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="信息滚动效果的实现">
-<meta name="twitter:description" content="今天在慕课网上看到一个关于信息滚动的例子个人比较好奇就动手做了这个例子这里是展示：信息滚动">
+<meta name="twitter:description" content="今天在慕课网上看到关于信息滚动效果的实现的课程感觉比较有趣，于是根据老师的方法做了一个小的demo代码部分如下（省略了CSS部分）：{ % codeblock }                var area=document.getElementById(‘moocbox’), first=document.getElementById(‘first’),            second=">
   
     <link rel="alternative" href="/atom.xml" title="tailorYang的博客" type="application/atom+xml">
   
@@ -147,14 +147,24 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>今天在慕课网上看到一个关于信息滚动的例子个人比较好奇就动手做了这个例子<br>这里是展示：<a href="https://tailoryang.github.io/Demo/scroll/index.html" target="_blank" rel="external">信息滚动</a></p>
-
+        <p>今天在慕课网上看到关于信息滚动效果的实现的课程感觉比较有趣，于是根据老师的方法做了一个小的demo<br>代码部分如下（省略了CSS部分）：<br>{ % codeblock }<br>    <script><br>            var area=document.getElementById(‘moocbox’), first=document.getElementById(‘first’),<br>            second=document.getElementById(‘second’);<br>            second.innerHTML=first.innerHTML;<br>            function move(){<br>                if(area.scrollTop&gt;=first.offsetHeight){<br>                    area.scrollTop=0;<br>                }else{<br>                    area.scrollTop++;<br>                }</p>
+<pre><code>    }
+    var time=setInterval(move,80);
+    area.onmouseover=function(){
+        clearInterval(time);
+    }
+    area.onmouseout=function(){
+        time=setInterval(move,80);
+    }
+&lt;/script&gt;
+</code></pre><p>{ % endcodeblock % }<br>效果在这里<a href="https://tailorYang.github.io/Demo/scroll/index.html">信息滚动</a></p>
+</script></p>
       
     </div>
     <div class="article-info article-info-index">
       
-      <a href="/2016/11/14/信息滚动效果的实现/" class="archive-article-date">
-  	<time datetime="2016-11-14T07:15:46.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-11-14</time>
+      <a href="/2016/11/15/信息滚动效果的实现/" class="archive-article-date">
+  	<time datetime="2016-11-15T12:02:39.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-11-15</time>
 </a>
       
       
